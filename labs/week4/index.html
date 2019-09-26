@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Animation Lab</title>
+		<style type="text/css">
+			.title{
+				margin-top: 40px;
+				font-size: 3em;
+				animation: titlein 0.7s;
+			}
+			#subheaderbox{
+				margin-top: 20px;
+				width: 750px;
+				height: 250px;
+				background-color: #aa37d4;
+				animation: subsquarein 1.4s;
+			}
+			.box{
+				opacity: 0;
+				background-color: #e317c4;
+				border-radius: 5px;
+				width: 200px;
+				height: 150px;
+				margin: 25px;
+				padding: 15px;
+				animation: boxIn 0.5s;
+				animation-delay: 0.2s;
+				animation-fill-mode: both;
+			}
+			.boxOver{
+				opacity: 1;
+				animation: boxOver 0.6s;
+				animation-fill-mode: both;
+			}
+			.boxOff{
+				animation: boxOff 0.6s;
+				animation-fill-mode: both;
+			}
+			.boxOut{
+				animation: boxOut 0.6s;
+				animation-fill-mode: both;
+			}
+			#boxes{
+				width: 900px;
+				margin: 20px;
+				display: flex;
+				flex-flow: row wrap;
+			}
+			.subheadDown{
+				animation: subheadDown 0.6s;
+				animation-fill-mode: both;
+			}
+			.titleDown{
+				animation: titleDown 0.6s;
+				animation-fill-mode: both;
+			}
+			@keyframes titlein{
+				from{
+					opacity: 0;
+					transform: rotateY(90deg);
+				}
+			}
+			@keyframes subsquarein{
+				from{
+					opacity: 0;
+					transform: scale(0.1);
+				}
+				to{
+					opacity: 1;
+					transform: scale(1);
+				}
+			}
+			@keyframes boxIn{
+				from{
+					opacity: 0;
+					transform: scale(0.2);
+				}
+				to{
+					opacity: 1;
+				}
+			}
+			@keyframes boxOver{
+				from{
+					opacity: 1;
+					background-color: #e83867;
+					transform: scale(1);
+				}
+				to{
+					opacity: 1;
+					background-color: #e317c4;
+					transform: scale(1.2);
+				}
+			}
+			@keyframes boxOff{
+				from{
+					opacity: 1;
+					transform: scale(1.2);
+					background-color: #e83867;
+				}
+				to{
+					opacity: 1;
+					background-color: #e317c4;
+					transform: scale(1);
+				}
+			}
+			@keyframes boxOut{
+				from{
+					transform: scale(1);
+					background-color:#e317c4;
+					opacity: 1;
+				}
+				to{
+					opacity: 0;
+					background-color: #e83867;
+					transform: scale(0.5);
+				}
+			}
+			@keyframes subheadDown{
+				from{
+					opacity: 1;
+					transform: scale(1);
+				}
+				to{
+					opacity: 0;
+					transform: scale(0.5);
+				}
+			}
+			@keyframes titleDown{
+				from{
+					opacity: 1;
+					transform: scale(1);
+				}
+				to{
+					opacity: 0;
+					transform: scale(0.5);
+				}
+
+			}
+		</style>
+	</head>
+	<body>
+		<div class="title">Title</div>
+		<div id="subheaderbox"></div>
+		<div id="boxes"></div>
+		<script type="text/javascript" src="js/app.js"></script>
+	</body>
+</html>
