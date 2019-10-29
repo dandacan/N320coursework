@@ -1,0 +1,15 @@
+{
+	"meta":{
+		"type": "best 3 cpus by each manufacturer"
+	} , 
+	"amd":[
+		{"name":"3950x","cores": 16, "bclk": 3.5, "boost" : 4.6, "price": 749},
+		{"name":"3900x", "cores": 12, "bclk": 3.8, "boost" : 4.6, "price": 519},
+		{"name":"3700x","cores": 8, "bclk": 3.6, "boost" : 4.4, "price": 329}
+	], 
+	"intel":[
+		{"name":"9900k", "cores": 8, "bclk": 3.6, "boost": 5.0, "price": 519},
+		{"name":"10980xe", "cores": 18, "bclk": 3.0, "boost": 4.6, "price": 1000},
+		{"name":"10900x", "cores": 10, "bclk": 3.7, "boost": 4.5, "price": 549}
+	]
+}
