@@ -11,16 +11,18 @@
 			text: String,
 			length: Number
 		},
-		data: {
-			rolls: [0,0,0,0,0]
-		}
+		data: function() {
+			return{
+				rolls: []
+			}
+		},
 		methods: {
-			passrolls (event){
+			passrolls (){
 				this.rolls = [];
-				for (var i = 0; i <= this.length; i++) {
+				for (var i = 0; i < this.length; i++) {
 					this.rolls.push({i: i, value: Math.round(((Math.random()*5)+ 1))});
 				}
-				this.$emit('rolled', this.rolls);
+				this.$emit('rolled', this.rolls.sort(function(a,b){return a.value - b.value}));
 			}
 		}
 

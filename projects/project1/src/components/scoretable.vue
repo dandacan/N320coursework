@@ -76,8 +76,10 @@
 
 	export default {
 		name: "scoretable",
-		data: {
-			scores: scores 
+		data: function() {
+			return {
+				scores: scores 
+			}
 		}
 	}
 </script>
